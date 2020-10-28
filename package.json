@@ -5,5 +5,8 @@
     "license": "MIT",
     "dependencies": {
         "tailwindcss": "^1.9.6"
+    },
+    "scripts": {
+        "build:css": "tailwind build src/index.css -o public/styles.css"
     }
 }
