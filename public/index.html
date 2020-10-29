@@ -6,6 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./styles.css" />
         <title>Tailwind CSS Practice</title>
+
+        <style>
+            #menu-toggle:checked + #menu {
+                display: flex;
+            }
+        </style>
     </head>
 
     <body class="bg-gray-600 flex flex-col justify-between h-screen">
@@ -42,11 +48,47 @@
                     placeholder="Type A Song Name"
                     class="placeholder-gray-700 placeholder-opacity-50 text-md focus:outline-none font-light"
                 />
-                <select name="playlists" id="playlists">
-                    <option value="playlist1">Playlist 1</option>
-                    <option value="playlist2">Playlist 2</option>
-                    <option value="playlist3">Playlist 3</option>
-                </select>
+                <div class="w-32">
+                    <label
+                        for="menu-toggle"
+                        class="text-sm rounded-lg block cursor-pointer bg-gray-500 text-gray-800"
+                    >
+                        <div
+                            class="p-2 flex flex-row items-center justify-between"
+                        >
+                            <span>Select Playlist</span>
+                            <svg
+                                class="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M19 9l-7 7-7-7"
+                                ></path>
+                            </svg>
+                        </div>
+                    </label>
+                    <input type="checkbox" id="menu-toggle" class="hidden" />
+
+                    <div
+                        class="mt-2 right-align max-w-xs right-sm text-sm shadow-lg rounded hidden flex-col truncate absolute bg-white"
+                        id="menu"
+                    >
+                        <a
+                            href="#"
+                            class="px-4 py-2 hover:bg-gray-700 hover:text-white rounded"
+                            >Playlist 1</a
+                        >
+                        <a href="#" class="px-4 py-2"
+                            >Really long playlist name</a
+                        >
+                    </div>
+                </div>
             </div>
         </section>
         <section class="px-4">
@@ -57,21 +99,21 @@
                     <svg
                         class="w-6 h-6"
                         fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                        stroke="currentcolor"
+                        viewbox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                     >
                         <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                            d="m12 6v6m0 0v6m0-6h6m-6 0h6"
                         ></path>
                     </svg>
                 </div>
-                <span>Song Name</span>
-                <span>Artist Name</span>
-                <span>Album</span>
+                <span>song name</span>
+                <span>artist name</span>
+                <span>album</span>
             </div>
             <div
                 class="flex px-4 py-2 w-full items-center justify-between text-gray-400 text-xs border-l-4 my-2"
@@ -80,21 +122,21 @@
                     <svg
                         class="w-6 h-6"
                         fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                        stroke="currentcolor"
+                        viewbox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                     >
                         <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                            d="m12 6v6m0 0v6m0-6h6m-6 0h6"
                         ></path>
                     </svg>
                 </div>
-                <span>Song Name</span>
-                <span>Artist Name</span>
-                <span>Album</span>
+                <span>song name</span>
+                <span>artist name</span>
+                <span>album</span>
             </div>
         </section>
     </body>
