@@ -8,37 +8,10 @@
         <title>Tailwind CSS Practice</title>
     </head>
 
-    <body class="bg-gray-300">
+    <body class="bg-gray-600 flex flex-col justify-between h-screen">
         <header>
-            <nav
-                class="bg-gray-100 flex items-center justify-between px-10 h-20"
-            >
-                <h3 class="text-lg font-bold">Welcome User123</h3>
-                <a href="#" class="text-grey-900 font-medium text-sm"
-                    >Sign Out</a
-                >
-            </nav>
-        </header>
-
-        <section class="flex flex-col items-center mx-10">
-            <input
-                type="text"
-                class="my-2 px-5 py-2 rounded shadow w-full"
-                placeholder="Song Name"
-            />
-            <div class="inline-block relative w-full">
-                <select
-                    name="playlists"
-                    class="appearance-none px-5 py-2 rounded shadow text-sm w-full"
-                    id="playlists"
-                >
-                    <option value="playlist1">Playlist 1</option>
-                    <option value="playlist2">Playlist 2</option>
-                    <option value="playlist3">Playlist 3</option>
-                </select>
-                <div
-                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-                >
+            <nav class="flex items-center justify-between px-10 h-12 bg-white">
+                <div>
                     <svg
                         class="w-6 h-6"
                         fill="none"
@@ -50,10 +23,78 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                            d="M19 9l-7 7-7-7"
+                            d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                         ></path>
                     </svg>
                 </div>
+                <a href="#" class="text-grey-900 font-medium text-sm"
+                    >Sign Out</a
+                >
+            </nav>
+        </header>
+
+        <section class="flex items-center justify-center px-4">
+            <div
+                class="flex flex-row items-center justify-between bg-white rounded-lg px-4 py-2 w-full"
+            >
+                <input
+                    type="text"
+                    placeholder="Type A Song Name"
+                    class="placeholder-gray-700 placeholder-opacity-50 text-md focus:outline-none font-light"
+                />
+                <select name="playlists" id="playlists">
+                    <option value="playlist1">Playlist 1</option>
+                    <option value="playlist2">Playlist 2</option>
+                    <option value="playlist3">Playlist 3</option>
+                </select>
+            </div>
+        </section>
+        <section class="px-4">
+            <div
+                class="flex px-4 py-2 w-full items-center justify-between text-gray-400 text-xs border-l-4 my-2"
+            >
+                <div>
+                    <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                        ></path>
+                    </svg>
+                </div>
+                <span>Song Name</span>
+                <span>Artist Name</span>
+                <span>Album</span>
+            </div>
+            <div
+                class="flex px-4 py-2 w-full items-center justify-between text-gray-400 text-xs border-l-4 my-2"
+            >
+                <div>
+                    <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                        ></path>
+                    </svg>
+                </div>
+                <span>Song Name</span>
+                <span>Artist Name</span>
+                <span>Album</span>
             </div>
         </section>
     </body>
